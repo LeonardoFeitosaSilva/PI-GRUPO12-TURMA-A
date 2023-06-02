@@ -38,5 +38,26 @@ public class ProjetoIntegrador {
 
     }
 
-    
+    public static void menu() throws InterruptedException {
+        Scanner entrada = new Scanner(System.in);
+        int seleciona_menu;
+        do {
+            System.out.println("\n1)Jogar\n2)Capitulos\n3)Creditos\n4)Sair");
+            seleciona_menu = entrada.nextInt();
+            switch (seleciona_menu) {
+                case 1:
+                    jogo();
+                    break;
+                case 2:
+                    capitulos();
+                    break;
+                case 3:
+                    creditos();
+                case 4:
+                    break;
+                default:
+                    System.out.println("\nEssa opcao nao existe, digite novamente: ");
+            }
+        } while (seleciona_menu != 1 && seleciona_menu != 2 && seleciona_menu != 3 && seleciona_menu != 4);
+    }
 }
