@@ -566,4 +566,72 @@ public class ProjetoIntegrador {
         } while (resp == false);
         return charada = "6 15 9 ";
     }
+
+    public static String Desafio4() {
+        Scanner entrada = new Scanner(System.in);
+        String vetor[] = {"16 18 5 19 1", "15 17 5 18 1", "17 19 5 20 1", "16 18 5 24 1"};
+        boolean acertou = false;
+        int resposta;
+        String charada;
+        Random random = new Random();
+        do {
+            int l = 0;
+            String compara[] = new String[3];
+            for (int i = 0; i < vetor.length; i++) {
+                //sorteia um índice
+                int j = random.nextInt(vetor.length);
+                //troca o conteúdo dos índices i e j do vetor
+                String temp = vetor[i];
+                vetor[i] = vetor[j];
+                vetor[j] = temp;
+            }
+            System.out.println("Selecione a alternativa que corresponde a conversao de HEXA para DECIMAL, do seguinte conjunto: 10 12 5 13 1");
+            for (String item : vetor) {
+                l++;
+                System.out.printf("%d)%s\n", l, item);
+                for (int a = 0; a < vetor.length - 1; a++) {
+                    compara = vetor;
+    
+                }
+            }
+            resposta = entrada.nextInt();
+            switch (resposta) {
+                case 1:
+                    if ("16 18 5 19 1".equals(compara[0])) {
+                        System.out.println("Sua resposta esta correta\n");
+                        acertou = true;
+                    } else {
+                        System.out.println("Resposta incorreta, tente novamente!");
+                    }
+                    break;
+                case 2:
+                    if ("16 18 5 19 1".equals(compara[1])) {
+                        System.out.println("Sua resposta esta correta\n");
+                        acertou = true;
+                    } else {
+                        System.out.println("Resposta incorreta, tente novamente!");
+                    }
+                    break;
+                case 3:
+                    if ("16 18 5 19 1".equals(compara[2])) {
+                        System.out.println("Sua resposta esta correta\n");
+                        acertou = true;
+                    } else {
+                        System.out.println("Resposta incorreta, tente novamente!");
+                    }
+                    break;
+                case 4:
+                    if ("16 18 5 19 1".equals(compara[3])) {
+                        System.out.println("Sua resposta esta correta\n");
+                        acertou = true;
+                    } else {
+                        System.out.println("Resposta incorreta, tente novamente!");
+                    }
+                    break;
+                default:
+                    System.out.println("Seleciona alternativa de 1 a 4\n");
+            }
+        } while (acertou == false);
+        return charada = "16 18 5 19 1 ";
+    }
 }
