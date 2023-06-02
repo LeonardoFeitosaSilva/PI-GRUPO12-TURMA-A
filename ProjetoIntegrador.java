@@ -372,4 +372,72 @@ public class ProjetoIntegrador {
         System.out.println("Capitulo III - Conheceis a verdade, e a verdade vos libertara");
         System.out.println("essa eh a 1 linha, do 3 capitulo");
     }
+
+    public static String Desafio1BinarioVetor() {
+        Scanner entrada = new Scanner(System.in);
+        String vetor[] = {"16 15 18 17 21 05", "15 14 17 16 20 04", "17 16 19 18 22 06", "16 15 19 16 22 04"};
+        boolean acertou = false;
+        String charada;
+        int resposta;
+        Random random = new Random();
+        do {
+            int l = 0;
+            String compara[] = new String[3];
+            for (int i = 0; i < vetor.length; i++) {
+                //sorteia um índice
+                int j = random.nextInt(vetor.length);
+                //troca o conteúdo dos índices i e j do vetor
+                String temp = vetor[i];
+                vetor[i] = vetor[j];
+                vetor[j] = temp;
+            }
+            System.out.println("Selecione a alternativa que corresponde a conversao do seguinte sistema binario em decimal: 10000 1111 10010 10001 10101 101");
+            for (String item : vetor) {
+                l++;
+                System.out.printf("%d)%s\n", l, item);
+                for (int a = 0; a < vetor.length - 1; a++) {
+                    compara = vetor;
+    
+                }
+            }
+            resposta = entrada.nextInt();
+            switch (resposta) {
+                case 1:
+                    if ("16 15 18 17 21 05".equals(compara[0])) {
+                        System.out.println("Sua resposta esta correta\n");
+                        acertou = true;
+                    } else {
+                        System.out.println("Resposta incorreta, tente novamente!\n");
+                    }
+                    break;
+                case 2:
+                    if ("16 15 18 17 21 05".equals(compara[1])) {
+                        System.out.println("Sua resposta esta correta\n");
+                        acertou = true;
+                    } else {
+                        System.out.println("Resposta incorreta, tente novamente!\n");
+                    }
+                    break;
+                case 3:
+                    if ("16 15 18 17 21 05".equals(compara[2])) {
+                        System.out.println("Sua resposta esta correta\n");
+                        acertou = true;
+                    } else {
+                        System.out.println("Resposta incorreta, tente novamente!\n");
+                    }
+                    break;
+                case 4:
+                    if ("16 15 18 17 21 05".equals(compara[3])) {
+                        System.out.println("Sua resposta esta correta\n");
+                        acertou = true;
+                    } else {
+                        System.out.println("Resposta incorreta, tente novamente!\n");
+                    }
+                    break;
+                default:
+                    System.out.println("Seleciona alternativa de 1 a 4\n");
+            }
+        } while (acertou == false);
+        return charada = "16 15 18 17 21 05 ";
+    }
 }
