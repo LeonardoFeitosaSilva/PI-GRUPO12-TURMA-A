@@ -503,4 +503,67 @@ public class ProjetoIntegrador {
         } while (resp == false);
         return charada = "1 1 7 21 1 ";
     }
+
+    public static String Desafio3() {
+        Scanner entrada = new Scanner(System.in);
+        char resposta;
+        String a = "6 15 9";
+        String b = "5 14 8";
+        String c = "6 14 9";
+        String d = "6 16 9";
+        String result = "6 15 9";
+        String charada;
+        boolean resp = false;
+        do {
+            System.out.println("Converta o seguinte sistema HEXADECIMAL para DECIMAL : 6 F 9");
+            List<String> list = Arrays.asList(a, b, c, d);
+            Collections.shuffle(list);
+            Collections.shuffle(list);
+            Collections.shuffle(list);
+            System.out.println("A) " + list.get(0));
+            System.out.println("B) " + list.get(1));
+            System.out.println("C) " + list.get(2));
+            System.out.println("D) " + list.get(3) + "\n");
+            String letra = entrada.next();
+            resposta = letra.charAt(0);
+    
+            switch (resposta) {
+                case 'a', 'A' -> {
+                    if (list.get(0).equals(result)) {
+                        System.out.println("RESPOSTA CORRETA!\n");
+                        resp = true;
+                    } else {
+                        System.out.println("Resposta Incorreta\n");
+                    }
+                }
+                case 'b', 'B' -> {
+                    if (list.get(1).equals(result)) {
+                        System.out.println("RESPOSTA CORRETA!");
+                        resp = true;
+                    } else {
+                        System.out.println("Resposta Incorreta\n");
+                    }
+                }
+                case 'c', 'C' -> {
+                    if (list.get(2).equals(result)) {
+                        System.out.println("RESPOSTA CORRETA!\n");
+                        resp = true;
+                    } else {
+                        System.out.println("Resposta Incorreta\n");
+                    }
+                }
+                case 'd', 'D' -> {
+                    if (list.get(3).equals(result)) {
+                        System.out.println("RESPOSTA CORRETA!\n");
+                        resp = true;
+                    } else {
+                        System.out.println("Resposta Incorreta\n");
+                    }
+                }
+                default ->
+                    System.out.println("RESPOSTA INCORRETA, SELECIONE UMA ALTERNATIVA ENTRE A e D \n");
+            }
+        } while (resp == false);
+        return charada = "6 15 9 ";
+    }
 }
