@@ -60,4 +60,30 @@ public class ProjetoIntegrador {
             }
         } while (seleciona_menu != 1 && seleciona_menu != 2 && seleciona_menu != 3 && seleciona_menu != 4);
     }
+
+    public static void capitulos() throws InterruptedException {
+        Scanner entrada = new Scanner(System.in);
+        int escolha_capitulo;
+        System.out.println("\n    Em Busca do conhecimento perdido - Capitulos ");
+        do {
+            System.out.println("\n1) O despertar do guerreio\n2) O conhecimento eh a verdade\n3) Conheceis a verdade, e a verdade vos libertara\n4) Voltar");
+            escolha_capitulo = entrada.nextInt();
+            switch (escolha_capitulo) {
+                case 1:
+                    capitulo1();
+                    break;
+                case 2:
+                    capitulo2();
+                    break;
+                case 3:
+                    capitulo3();
+                    break;
+                case 4:
+                    menu();
+                    break;
+                default:
+                    System.out.println("Capitulo invalido, digite novamente: ");
+            }
+        } while (escolha_capitulo != 1 && escolha_capitulo != 2 && escolha_capitulo != 3 && escolha_capitulo != 4);
+    }
 }
