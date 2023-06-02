@@ -86,4 +86,19 @@ public class ProjetoIntegrador {
             }
         } while (escolha_capitulo != 1 && escolha_capitulo != 2 && escolha_capitulo != 3 && escolha_capitulo != 4);
     }
+
+    public static void creditos() throws InterruptedException {
+        Scanner entrada = new Scanner(System.in);
+        int escolha_menu;
+        System.out.println("\n\n //  Criadores \\\\  \nLeonardo Feitosa da Silva \nDanilo Barbosa");
+        do {
+            System.out.println("\n2)Sair");
+            escolha_menu = entrada.nextInt();
+            if (escolha_menu == 2) {
+                menu();
+            } else {
+                System.out.println("\nSelecao invalida, digite novamente: ");
+            }
+        } while (escolha_menu != 2);
+    }
 }
